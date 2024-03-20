@@ -1,11 +1,52 @@
-import React from 'react'
+import { Schema, model, models, Document } from 'mongoose'
 
-const order.model = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+export interface IOrder extends Document {
+  createdAt: Date
+  stripeId: string
+  totalAmount: string
+  event: {
+    _id: string
+    title: string
+  }
+  buyer: {
+    _id: string
+    firstName: string
+    lastName: string
+  }
 }
 
-export default order.model
+export type IOrderItem = {
+  _id: string
+  totalAmount: string
+  createdAt: Date
+  eventTitle: string
+  eventId: string
+  buyer: string
+}
+
+const OrderSchema = new Schema({
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  stripeId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  totalAmount: {
+    type: String,
+  },
+  event: {
+    type: Schema.Types.ObjectId,
+    ref: 'Event',
+  },
+  buyer: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
+})
+
+const Order = models.Order || model('Order', OrderSchema)
+
+export default Order
