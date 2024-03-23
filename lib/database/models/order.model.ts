@@ -49,8 +49,6 @@ const OrderSchema = new Schema({
 
 const Order = models.Order || model('Order', OrderSchema)
 
-<<<<<<< HEAD
+
 export default Order
-=======
-export default Order
->>>>>>> 43dbb810a1526354685c507394d00f94ef8e5bfe
+
