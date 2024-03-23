@@ -1,8 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
-
 import { twMerge } from 'tailwind-merge'
 import qs from 'query-string'
-
 import { UrlQueryParams, RemoveUrlQueryParams } from '@/types'
 
 export function cn(...inputs: ClassValue[]) {
@@ -17,6 +15,7 @@ export const formatDateTime = (dateString: Date) => {
     hour: 'numeric', // numeric hour (e.g., '8')
     minute: 'numeric', // numeric minute (e.g., '30')
     hour12: true, // use 12-hour clock (true) or 24-hour clock (false)
+    timeZone: 'Asia/Kolkata', // Indian time zone
   }
 
   const dateOptions: Intl.DateTimeFormatOptions = {
@@ -24,18 +23,18 @@ export const formatDateTime = (dateString: Date) => {
     month: 'short', // abbreviated month name (e.g., 'Oct')
     year: 'numeric', // numeric year (e.g., '2023')
     day: 'numeric', // numeric day of the month (e.g., '25')
+    timeZone: 'Asia/Kolkata', // Indian time zone
   }
 
   const timeOptions: Intl.DateTimeFormatOptions = {
     hour: 'numeric', // numeric hour (e.g., '8')
     minute: 'numeric', // numeric minute (e.g., '30')
     hour12: true, // use 12-hour clock (true) or 24-hour clock (false)
+    timeZone: 'Asia/Kolkata', // Indian time zone
   }
 
   const formattedDateTime: string = new Date(dateString).toLocaleString('en-US', dateTimeOptions)
-
   const formattedDate: string = new Date(dateString).toLocaleString('en-US', dateOptions)
-
   const formattedTime: string = new Date(dateString).toLocaleString('en-US', timeOptions)
 
   return {
@@ -51,7 +50,7 @@ export const formatPrice = (price: string) => {
   const amount = parseFloat(price)
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'INR',
   }).format(amount)
 
   return formattedPrice
@@ -59,7 +58,6 @@ export const formatPrice = (price: string) => {
 
 export function formUrlQuery({ params, key, value }: UrlQueryParams) {
   const currentUrl = qs.parse(params)
-
   currentUrl[key] = value
 
   return qs.stringifyUrl(
