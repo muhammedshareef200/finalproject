@@ -74,10 +74,11 @@ EventEase is a revolutionary web application designed to simplify the process of
 **📸 Screenshots**  
 
 1. 🏠 Homepage: 
-(https://drive.google.com/uc?id=1If04DBKGWD7huCKyzSZSk5KGJFMy1yxf)
+![Alt Text](https://drive.google.com/uc?id=1If04DBKGWD7huCKyzSZSk5KGJFMy1yxf)
+
 
 2. 🗓️ Event Details: 
-       (https://drive.google.com/uc?id=15adn6-kjavgv9Bf2SPPYGQOg7XhHVVW2)
+   ![ALt text](https://drive.google.com/uc?id=15adn6-kjavgv9Bf2SPPYGQOg7XhHVVW2)
 
 
 
