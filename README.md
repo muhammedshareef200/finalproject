@@ -72,16 +72,19 @@ EventEase is a revolutionary web application designed to simplify the process of
 ---
 
 **📸 Screenshots**  
-<p align="center" style="font-size:24px;">🏠 Homepage</p>
-
-![Homepage](https://drive.google.com/uc?id=1If04DBKGWD7huCKyzSZSk5KGJFMy1yxf)
+<h2 align="center">🏠 Home Page</h2><br>
 
 
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1If04DBKGWD7huCKyzSZSk5KGJFMy1yxf" alt="Home Screen" width="500">
+</p>
 
-<p align="center" style="font-size:24px;">📅 Event Details</p>
 
-   ![Event Page](https://drive.google.com/uc?id=15adn6-kjavgv9Bf2SPPYGQOg7XhHVVW2)
+<h2 align="center">📅 Event Details</h2><br>
 
+<p align="center">
+  <img src="https://drive.google.com/uc?id=15adn6-kjavgv9Bf2SPPYGQOg7XhHVVW2" alt="Event Details" width="500">
+</p>
 
 
 ---
